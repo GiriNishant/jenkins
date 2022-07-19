@@ -9,7 +9,7 @@ pipeline {
     stage('scm clone'){
             steps{
             git branch: 'main', 
-			credentialsId: 'Nishant@reddy1', 
+			credentialsId: 'GiriNishantNishant@reddy1', 
 			url: 'https://github.com/GiriNishant/jenkins.git'
             }
         }

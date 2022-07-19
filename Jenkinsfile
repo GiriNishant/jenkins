@@ -1,6 +1,6 @@
 pipeline {
   environment {
-    registry = '329839090168.dkr.ecr.us-east-1.amazonaws.com/test'
+    registry = '329839090168.dkr.ecr.us-west-2.amazonaws.com/test'
     registryCredential = '329839090168'
     dockerImage = ''
   }
@@ -23,7 +23,7 @@ pipeline {
     stage('Deploy image') {
         steps{
             script{
-                docker.withRegistry("https://" + registry, "ecr:us-east-1:" + registryCredential) {
+                docker.withRegistry("https://" + registry, "ecr:us-west-2:" + registryCredential) {
                     dockerImage.push()
                 }
             }
